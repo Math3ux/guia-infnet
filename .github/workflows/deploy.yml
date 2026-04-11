@@ -65,7 +65,7 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
       - name: Deploy to Kubernetes
-                if: false  # Desativado - requer cluster K8s acessível
+        if: false  # Desativado - requer cluster K8s acessível
         uses: azure/k8s-deploy@v1
         with:
           manifests: |
